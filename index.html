@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect 4 - Multiplayer Strategy Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Connect 4</h1>
+            <p>Strategy & Skill</p>
+        </header>
+
+        <main>
+            <div id="game-info" class="game-info">
+                <div id="status-card" class="status-card player1-active">
+                    <span id="status-text">Player 1's Turn (Red)</span>
+                </div>
+            </div>
+
+            <div id="board-outer">
+                <!-- The board will be programmatically generated here -->
+                <div id="game-board" class="game-board"></div>
+            </div>
+
+            <div class="controls">
+                <button id="reset-button" class="btn btn-primary">New Game</button>
+            </div>
+        </main>
+
+        <footer>
+            <p>Click a column to drop your disc. Connect four in a row to win!</p>
+        </footer>
+    </div>
+
+    <!-- Notification system for game results -->
+    <div id="overlay" class="overlay hidden">
+        <div class="modal">
+            <h2 id="modal-title">Game Over!</h2>
+            <p id="modal-message">Player 1 Wins!</p>
+            <button id="modal-close" class="btn btn-secondary">Play Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
